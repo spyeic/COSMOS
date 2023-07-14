@@ -9,7 +9,7 @@ subprocess.run("./a.out")
 # in the place of "trajectory.txt" you should use your the name you gave your text file containing
 # the "data" from your simulation, which can be the full path if you do not want to store the data 
 # in the same directory as this program.
-trajectory = np.loadtxt("Hagrid")
+trajectory = np.loadtxt("Hagrid.data")
 
 # since we don't know how this was imported, I will just check by asking the program to tell me the 
 # dimensions of trajectory
