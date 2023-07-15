@@ -7,7 +7,7 @@ int main()
     int j;
     
     FILE *fileout;
-    fileout = fopen("Hagrid", "w");
+    fileout = fopen("Hagrid.data", "w");
     printf("\nEnter starting height y and velocity v:   ");
     scanf("%lf %lf", &y, &v);
     printf("\nEnter total time:   ");
