@@ -2,13 +2,15 @@
 
 int main()
 {
-    const int N = 3;
+    int N;
+    printf("Enter N: ");
+    scanf("%d", &N);
     double M[N][N];
     double v[N];
 
     printf("enter matrix for m:");
 
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++) 
     {
         for (int j = 0; j < N; j++)
         {
