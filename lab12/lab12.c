@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "../lab11/matrix_functions.h"
+#include "../matrix_functions.h"
 int main()
 {
     

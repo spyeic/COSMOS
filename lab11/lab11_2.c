@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "matrix_functions.h"
+#include "../matrix_functions.h"
 
 double dot(Vec *v1, Vec *v2)
 {
