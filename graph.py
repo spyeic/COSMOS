@@ -25,13 +25,16 @@ graph_datas = [np.loadtxt(each) for each in graph_paths]
 # Now we know how the array "trajectory" is shaped, so we can plot the trajectory!
 # If the axes come out inverted, you can always switch the contents in the plot function
 
-plt.xlabel("t (s)");
-plt.ylabel("x (m)");
 
 colors = ["red", "blue", "green", "orange", "purple", "black", "yellow", "pink", "brown", "gray"]
 
 for i, each in enumerate(graph_datas):
-    plt.plot(each[:,0], each[:,1], color=colors[i % len(colors)], label=graph_paths[i])
+    plt.plot(
+        each[:,0],
+        each[:,1],
+        color=colors[i % len(colors)],
+        label=graph_paths[i].split("/")[-1].split(".")[0]
+    )
 
 plt.legend(loc='upper right')
 
