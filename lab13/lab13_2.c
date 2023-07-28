@@ -21,6 +21,8 @@ void create_H(Mat *H)
             }
         }
     }
+    H->Matrix[0][H->M - 1] = Ehop;
+    H->Matrix[H->N - 1][0] = Ehop;
 }
 
 int main()

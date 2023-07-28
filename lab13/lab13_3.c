@@ -3,6 +3,8 @@
 #include "../matrix_functions.h"
 
 #define E0 -13.6
+#define E0A -13.6
+#define E0B -12.0
 #define Ehop 0.5
 
 void create_H(Mat *H)
@@ -13,7 +15,14 @@ void create_H(Mat *H)
         {
             if (i == j)
             {
-                H->Matrix[i][j] = E0;
+                if (j % 2 == 0)
+                {
+                    H->Matrix[i][j] = E0A;
+                }
+                else
+                {
+                    H->Matrix[i][j] = E0B;
+                }
             }
             if (i == j + 1 || i == j - 1)
             {
@@ -21,11 +30,13 @@ void create_H(Mat *H)
             }
         }
     }
+    H->Matrix[0][H->M - 1] = Ehop;
+    H->Matrix[H->N - 1][0] = Ehop;
 }
 
 int main()
 {
-    int N = 512;
+    int N = 32;
     int i, j;
     Mat testmat, vecs;
     Vec vals_real, vals_im;
