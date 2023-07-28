@@ -27,12 +27,23 @@ graph_datas = [np.loadtxt(each) for each in graph_paths]
 
 
 colors = ["red", "blue", "green", "orange", "purple", "black", "yellow", "pink", "brown", "gray"]
-
+rgbs = [
+    (1, 0, 0),
+    (0, 0, 1),
+    (0, 1, 0),
+    (1, 0.5, 0),
+    (0.5, 0, 1),
+    (0, 0.5, 1),
+    (0.5, 1, 0),
+    (1, 0, 0.5),
+    (0, 1, 0.5),
+    (0.5, 0.5, 0.5),
+]
 for i, each in enumerate(graph_datas):
     plt.plot(
         each[:,0],
         each[:,1],
-        color=colors[i % len(colors)],
+        color=rgbs[i] + (0.8,),
         label=graph_paths[i].split("/")[-1].split(".")[0]
     )
 
